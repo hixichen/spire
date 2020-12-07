@@ -94,7 +94,6 @@ func (m *MetricsImpl) ListenAndServe(ctx context.Context) error {
 	for _, runner := range m.runners {
 		tasks = append(tasks, runner.run)
 	}
-
 	return util.RunTasks(ctx, tasks...)
 }
 
